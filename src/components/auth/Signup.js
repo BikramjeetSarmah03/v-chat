@@ -20,8 +20,6 @@ const Signup = () => {
   // const [pic, setPic] = useState();
   const [picLoading, setPicLoading] = useState(false);
 
-  const url = "https://api.cloudinary.com/v1_1/bikramjeet/image/upload";
-
   const submitHandler = async () => {
     setPicLoading(true);
     if (!name || !email || !password || !confirmpassword) {
