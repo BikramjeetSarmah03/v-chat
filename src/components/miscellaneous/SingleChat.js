@@ -17,7 +17,7 @@ import animationData from "../../animations/typing.json";
 
 import io from "socket.io-client";
 import { ChatState } from "../../context/ChatProvider";
-const ENDPOINT = process.env.REACT_APP_BACKEND;
+const ENDPOINT = "https://vchat-project.onrender.com";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
