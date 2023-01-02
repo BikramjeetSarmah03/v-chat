@@ -10,11 +10,8 @@ function App() {
   const { user } = ChatState();
   return (
     <>
-      {!user ? (
-        <Route exact path="/" component={Home} />
-      ) : (
-        <Route exact path="/chat" component={Chats} />
-      )}
+      <Route exact path="/" component={Home} />
+      <Route exact path="/chat" component={Chats} />
     </>
   );
 }
