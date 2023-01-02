@@ -7,6 +7,11 @@ const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const app = express();
 require("dotenv").config({ path: "./config/config.env" });
 app.use(express.json());
+app.use(
+  cors({
+    origin: process.env.FRONTEND,
+  })
+);
 
 connectDB();
 
