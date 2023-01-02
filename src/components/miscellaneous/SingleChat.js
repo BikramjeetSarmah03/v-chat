@@ -18,7 +18,6 @@ import animationData from "../../animations/typing.json";
 import io from "socket.io-client";
 import { ChatState } from "../../context/ChatProvider";
 const ENDPOINT = process.env.REACT_APP_BACKEND;
-console.log(process.env.BACKEND);
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
