@@ -18,7 +18,6 @@ const Home = () => {
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("userInfo"));
-
     if (user) history.push("/chat");
   }, [history]);
 

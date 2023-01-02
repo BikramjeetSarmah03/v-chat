@@ -13,8 +13,9 @@ const Chats = () => {
   const [fetchAgain, setFetchAgain] = useState(false);
 
   useEffect(() => {
-    if (!user) history.push("/");
-  }, []);
+    if (!user || user === null || user === undefined || user === {})
+      history.push("/");
+  }, [history]);
 
   return (
     <div style={{ width: "100%" }}>

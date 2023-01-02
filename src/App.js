@@ -1,12 +1,17 @@
 import { Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Chats from "./pages/Chats";
+import { ChatState } from "./context/ChatProvider";
 
 function App() {
+  const { user } = ChatState();
   return (
     <>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/chat" component={Chats} />
+      {!user ? (
+        <Route exact path="/" component={Home} />
+      ) : (
+        <Route exact path="/chat" component={Chats} />
+      )}
     </>
   );
 }
