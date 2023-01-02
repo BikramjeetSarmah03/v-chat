@@ -55,7 +55,6 @@ const Login = () => {
       setLoading(false);
       history.push("/chat");
     } catch (error) {
-      console.log(error);
       toast({
         title: "Error Occured!",
         description: error.response.data.message,
