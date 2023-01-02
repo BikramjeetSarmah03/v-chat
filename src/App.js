@@ -8,11 +8,10 @@ axios.defaults.baseURL = process.env.REACT_APP_BACKEND;
 
 function App() {
   const { user } = ChatState();
-  return (
-    <>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/chat" component={Chats} />
-    </>
+  return user ? (
+    <Route exact path="/chat" component={Chats} />
+  ) : (
+    <Route exact path="/" component={Home} />
   );
 }
 
