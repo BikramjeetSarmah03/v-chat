@@ -57,6 +57,13 @@ const SideDrawer = () => {
   const logoutHandler = () => {
     localStorage.removeItem("userInfo");
     setUser(null);
+    toast({
+      title: "Logout Successfull",
+      status: "success",
+      duration: 2000,
+      isClosable: true,
+      position: "top-left",
+    });
     history.push("/");
   };
 
@@ -65,7 +72,7 @@ const SideDrawer = () => {
       toast({
         title: "Please Enter something in search",
         status: "warning",
-        duration: 5000,
+        duration: 2000,
         isClosable: true,
         position: "top-left",
       });
@@ -90,7 +97,7 @@ const SideDrawer = () => {
         title: "Error Occured!",
         description: "Failed to Load the Search Results",
         status: "error",
-        duration: 5000,
+        duration: 2000,
         isClosable: true,
         position: "bottom-left",
       });
@@ -117,7 +124,7 @@ const SideDrawer = () => {
         title: "Error fetching the chat",
         description: error.message,
         status: "error",
-        duration: 5000,
+        duration: 2000,
         isClosable: true,
         position: "bottom-left",
       });
